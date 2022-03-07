@@ -1,0 +1,301 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev "1"
+Comp ""
+Comment1 "Design for JLCPCB 1-2 Layer Service"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x06_Female J1
+U 1 1 6226364C
+P 2450 3250
+F 0 "J1" H 2342 2725 50  0000 C CNN
+F 1 "USB2UART" H 2342 2816 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2450 3250 50  0001 C CNN
+F 3 "~" H 2450 3250 50  0001 C CNN
+	1    2450 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 62265316
+P 2750 2950
+F 0 "#PWR01" H 2750 2800 50  0001 C CNN
+F 1 "+3.3V" V 2765 3078 50  0000 L CNN
+F 2 "" H 2750 2950 50  0001 C CNN
+F 3 "" H 2750 2950 50  0001 C CNN
+	1    2750 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2650 2950 2750 2950
+Text GLabel 2750 3050 2    50   Input ~ 0
+DTR
+Wire Wire Line
+	2650 3050 2750 3050
+Text GLabel 2750 3150 2    50   Input ~ 0
+RX_I
+Text GLabel 2750 3250 2    50   Input ~ 0
+TX_O
+$Comp
+L power:GND #PWR02
+U 1 1 622671F7
+P 2750 3350
+F 0 "#PWR02" H 2750 3100 50  0001 C CNN
+F 1 "GND" V 2755 3222 50  0000 R CNN
+F 2 "" H 2750 3350 50  0001 C CNN
+F 3 "" H 2750 3350 50  0001 C CNN
+	1    2750 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 6226818B
+P 2750 3450
+F 0 "#PWR03" H 2750 3300 50  0001 C CNN
+F 1 "+5V" V 2765 3578 50  0000 L CNN
+F 2 "" H 2750 3450 50  0001 C CNN
+F 3 "" H 2750 3450 50  0001 C CNN
+	1    2750 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2650 3450 2750 3450
+Wire Wire Line
+	2650 3350 2750 3350
+Wire Wire Line
+	2650 3250 2750 3250
+Wire Wire Line
+	2650 3150 2750 3150
+$Comp
+L Transistor_BJT:BC547 Q2
+U 1 1 62269163
+P 4900 2800
+F 0 "Q2" H 5091 2846 50  0000 L CNN
+F 1 "BC547" H 5091 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 5100 2725 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 4900 2800 50  0001 L CNN
+	1    4900 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 6226ACEE
+P 4250 3150
+F 0 "Q1" H 4441 3196 50  0000 L CNN
+F 1 "BC547" H 4441 3105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 4450 3075 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 4250 3150 50  0001 L CNN
+	1    4250 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6226BF2D
+P 4350 2350
+F 0 "R2" H 4420 2396 50  0000 L CNN
+F 1 "470R" H 4420 2305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4280 2350 50  0001 C CNN
+F 3 "~" H 4350 2350 50  0001 C CNN
+	1    4350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6226C93D
+P 3800 3150
+F 0 "R1" V 4007 3150 50  0000 C CNN
+F 1 "1K" V 3916 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3730 3150 50  0001 C CNN
+F 3 "~" H 3800 3150 50  0001 C CNN
+	1    3800 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 62270A29
+P 5000 2350
+F 0 "R3" H 5070 2396 50  0000 L CNN
+F 1 "470R" H 5070 2305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4930 2350 50  0001 C CNN
+F 3 "~" H 5000 2350 50  0001 C CNN
+	1    5000 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2800 4700 2800
+$Comp
+L power:GND #PWR05
+U 1 1 62272527
+P 4350 3450
+F 0 "#PWR05" H 4350 3200 50  0001 C CNN
+F 1 "GND" H 4355 3277 50  0000 C CNN
+F 2 "" H 4350 3450 50  0001 C CNN
+F 3 "" H 4350 3450 50  0001 C CNN
+	1    4350 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 62272FC9
+P 5000 3450
+F 0 "#PWR07" H 5000 3200 50  0001 C CNN
+F 1 "GND" H 5005 3277 50  0000 C CNN
+F 2 "" H 5000 3450 50  0001 C CNN
+F 3 "" H 5000 3450 50  0001 C CNN
+	1    5000 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3150 4050 3150
+Wire Wire Line
+	4350 3350 4350 3450
+$Comp
+L power:+12V #PWR06
+U 1 1 62274C52
+P 5000 2100
+F 0 "#PWR06" H 5000 1950 50  0001 C CNN
+F 1 "+12V" H 5015 2273 50  0000 C CNN
+F 2 "" H 5000 2100 50  0001 C CNN
+F 3 "" H 5000 2100 50  0001 C CNN
+	1    5000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR04
+U 1 1 62275FF5
+P 4350 2100
+F 0 "#PWR04" H 4350 1950 50  0001 C CNN
+F 1 "+12V" H 4365 2273 50  0000 C CNN
+F 2 "" H 4350 2100 50  0001 C CNN
+F 3 "" H 4350 2100 50  0001 C CNN
+	1    4350 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2100 4350 2200
+Wire Wire Line
+	5000 2100 5000 2200
+Text GLabel 3550 3150 0    50   Input ~ 0
+TX_O
+Wire Wire Line
+	3550 3150 3650 3150
+Wire Wire Line
+	4350 2500 4350 2800
+Connection ~ 4350 2800
+Wire Wire Line
+	4350 2800 4350 2950
+Wire Wire Line
+	5000 3000 5000 3450
+Wire Wire Line
+	5000 2500 5000 2550
+Connection ~ 5000 2550
+Wire Wire Line
+	5000 2550 5000 2600
+$Comp
+L Device:R R4
+U 1 1 6227BB8F
+P 5900 2800
+F 0 "R4" H 5970 2846 50  0000 L CNN
+F 1 "100K" H 5970 2755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5830 2800 50  0001 C CNN
+F 3 "~" H 5900 2800 50  0001 C CNN
+	1    5900 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 6227BE51
+P 5900 3200
+F 0 "R5" H 5970 3246 50  0000 L CNN
+F 1 "47k" H 5970 3155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5830 3200 50  0001 C CNN
+F 3 "~" H 5900 3200 50  0001 C CNN
+	1    5900 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2950 5900 3000
+Text GLabel 6000 2550 2    50   Input ~ 0
+KLINE
+Wire Wire Line
+	5900 2650 5900 2550
+Wire Wire Line
+	5900 2550 6000 2550
+$Comp
+L power:GND #PWR08
+U 1 1 622870D9
+P 5900 3450
+F 0 "#PWR08" H 5900 3200 50  0001 C CNN
+F 1 "GND" H 5905 3277 50  0000 C CNN
+F 2 "" H 5900 3450 50  0001 C CNN
+F 3 "" H 5900 3450 50  0001 C CNN
+	1    5900 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3350 5900 3450
+Text GLabel 5800 3000 0    50   Input ~ 0
+RX_I
+Wire Wire Line
+	5800 3000 5900 3000
+Connection ~ 5900 3000
+Wire Wire Line
+	5900 3000 5900 3050
+$Comp
+L Connector:Screw_Terminal_01x03 J2
+U 1 1 6229E798
+P 6950 3150
+F 0 "J2" H 7030 3192 50  0000 L CNN
+F 1 "KLINE_CONN" H 7030 3101 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 6950 3150 50  0001 C CNN
+F 3 "~" H 6950 3150 50  0001 C CNN
+	1    6950 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR09
+U 1 1 622A0374
+P 6700 2850
+F 0 "#PWR09" H 6700 2700 50  0001 C CNN
+F 1 "+12V" H 6715 3023 50  0000 C CNN
+F 2 "" H 6700 2850 50  0001 C CNN
+F 3 "" H 6700 2850 50  0001 C CNN
+	1    6700 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 2850 6700 3050
+Wire Wire Line
+	6700 3050 6750 3050
+Text GLabel 6650 3150 0    50   Input ~ 0
+KLINE
+Wire Wire Line
+	6750 3150 6650 3150
+$Comp
+L power:GND #PWR010
+U 1 1 622A2962
+P 6700 3450
+F 0 "#PWR010" H 6700 3200 50  0001 C CNN
+F 1 "GND" H 6705 3277 50  0000 C CNN
+F 2 "" H 6700 3450 50  0001 C CNN
+F 3 "" H 6700 3450 50  0001 C CNN
+	1    6700 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3250 6700 3250
+Wire Wire Line
+	6700 3250 6700 3450
+Wire Wire Line
+	5000 2550 5900 2550
+Connection ~ 5900 2550
+$EndSCHEMATC
